@@ -1,0 +1,251 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-image: url(../img/productos.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+body h1{
+    font-size: 70px;
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: rgb(246, 132, 2);
+    color: rgb(253, 253, 253);
+}
+
+.todo{
+    width: 90%;
+    background: white;
+    margin: 60px auto;
+    min-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 50px;
+}
+
+.encabezados , .datos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezados{
+    background: rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.datos{
+    padding: 10px;
+    font-size: 1.2em;    
+}
+
+
+
+/*Botones editar, nuevo y volver atras*/
+.nuevo{
+	background: rgba(240, 136, 0, 0.836);
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+	border-radius: 15px;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-transform: uppercase;
+	position:fixed;
+	right:0px;
+}
+.edit{
+	background: rgba(240, 136, 0, 0.836);
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+	border-radius: 15px;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-transform: uppercase;
+	position:fixed;
+	right:130px;
+}
+
+.edit:hover, .nuevo:hover{
+	background-color: #000000;
+    color: white;
+}
+
+.volver{
+	background: rgba(240, 136, 0, 0.836);
+	color: rgb(0, 0, 0);
+	border-radius: 15px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.volver:hover{
+	background-color: #000000;
+    color: white;
+}
+
+
+
+
+
+/*boton eliminar*/
+.eliminar{
+	position: relative;
+	left: 130px;
+	display: block;
+	padding: 10px 10px;
+	border-radius: 6px;
+	text-align: center;
+	font-weight: bold;
+	max-width: 80px;
+	height: 35px;
+	margin-bottom: 50px;
+	overflow: hidden;
+	color:rgba(255,255,255,1);
+	cursor: pointer;
+	box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);
+	transition: all ease 0.5s;
+	background:#ad2222;
+}
+ 
+.eliminar:after, .eliminar:before{
+	width: 40px;
+	height: 110px;
+	content: '';
+	display: block;
+	background: rgba(255,255,255,0.5);
+	transform: rotate(45deg);
+	top: -30px;
+	position: absolute;
+	transition: none;
+	right:-25%;
+	cursor: pointer;
+}
+ 
+.eliminar:before{
+	left: -48%;
+}
+ 
+.eliminar:hover{
+	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+	background:#ff0101
+}
+ 
+.eliminar:hover:after, .eliminar:hover:before{
+	transform: rotate(45deg), scaleX(130%);
+	background: rgba(255,255,255,0.1);
+	transition: all ease 0.5s;
+}
+ 
+.eliminar:hover:after{
+	right: 130%;
+}
+ 
+.eliminar:hover:before{
+	left: 130%;
+}
+
+
+
+
+
+/*boton Editar*/
+
+.modi{
+	position: relative;
+	right: -30px;
+	display: block;
+	padding: 10px 10px;
+	border-radius: 6px;
+	text-align: center;
+	font-weight: bold;
+	max-width: 75px;
+	top: 6px;
+	height: 35px;
+	margin-bottom: -30px;
+	overflow: hidden;
+	color:rgba(255,255,255,1);
+	cursor: pointer;
+	box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);
+	transition: all ease 0.5s;
+	background:#2d56db;
+}
+ 
+.modi:after, .modi:before{
+	width: 40px;
+	height: 110px;
+	content: '';
+	display: block;
+	background: rgba(255,255,255,0.5);
+	transform: rotate(45deg);
+	top: -30px;
+	position: absolute;
+	transition: none;
+	right:-25%;
+	cursor: pointer;
+}
+ 
+.modi:before{
+	left: -48%;
+}
+ 
+.modi:hover{
+	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+	background:#16c5e4
+}
+ 
+.modi:hover:after, .modi:hover:before{
+	transform: rotate(45deg), scaleX(130%);
+	background: rgba(255, 255, 255, 0.1);
+	transition: all ease 0.5s;
+}
+ 
+.modi:hover:after{
+	right: 130%;
+}
+ 
+.modi:hover:before{
+	left: 130%;
+}
+
+/*Boton Actualizar*/
+
+.submit{
+	background: rgb(255, 137, 2);
+	border-radius: 6px;
+	font-size: 1.2em;  
+	color: white;
+	margin: 0;
+}
+
+.submit:hover{
+	background: rgb(0, 0, 0);
+	font-size: 1.2em;
+	margin: 0;
+}
+

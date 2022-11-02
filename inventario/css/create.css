@@ -1,0 +1,71 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-image: url(../img/productos.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+h1{
+    font-size: 70px;
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: rgb(246, 132, 2);
+    color: rgb(0, 0, 0);
+}
+
+.Contenedor_registro{
+    width: 20%;
+    background: rgb(255, 255, 255);
+    margin: 90px 650px;
+}
+
+
+.Contenedor_registro form{
+    
+    background: white;
+	box-shadow: 0 0 10px #333;
+	padding: 70px;
+	padding-bottom: 40px;
+    width: 600px;
+
+}
+
+.Contenedor_registro input{
+	padding: 5px;
+	width: 97%;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contenedor_registro button{
+	background: rgba(240, 136, 0, 0.836);
+	color: white;
+	border: none;
+	padding: 10px;
+	height:50px;
+	font-size: 1.1em;
+	margin: 20px auto;
+	cursor: pointer;
+    border-radius: 20px;
+
+}
+
+
+.Contenedor_registro button:hover{
+    background-color: #000000;
+    color: white;
+}

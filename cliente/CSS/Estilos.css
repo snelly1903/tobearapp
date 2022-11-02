@@ -1,0 +1,693 @@
+@font-face {
+    font-family: "Fraunces";
+    src: url(../Fuentes/Fraunces.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../Fuentes/Roboto-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Estilode letra para los parrafos */
+
+body {
+    margin: 0;
+    font-family: "Roboto-Regular";
+}
+
+
+/* Estilo de letras para los titulos */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Fraunces";
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+p {
+    line-height: 25px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Estilos del header */
+
+.main-header {
+    padding: 0 15px;
+}
+
+.main-title {
+    color: white;
+    font-size: 3em;
+}
+
+.color-span {
+    color: #fb6a03;
+}
+
+
+/* Estilos del icono del menu */
+
+.icon-menu {
+    font-size: 1.5em;
+    color: #fb6a03;
+    border: 1px solid rgb(255, 255, 255);
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Estilo del menu */
+
+.menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: #212121d3;
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.menu_item {
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    margin: auto;
+}
+
+.menu_link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    transition: all 0.5s;
+}
+.menu_link:hover{
+    color: #fb6a03;
+}
+
+
+/* Seudo Elemento del menu */
+
+.menu_link:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid #fb6a03;
+    border-top: 2px solid #fb6a03;
+    top: 0;
+    right: 0%;
+    opacity: 0;
+}
+
+.menu_link:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid #fb6a03;
+    border-bottom: 2px solid #fb6a03;
+    left: 0;
+    bottom: 0%;
+    opacity: 0;
+}
+
+.menu_link span:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid #fb6a03;
+    border-top: 2px solid #fb6a03;
+    top: 0;
+    left: 0%;
+    opacity: 0;
+}
+
+.menu_link span:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-bottom: 2px solid #fb6a03;
+    border-right: 2px solid #fb6a03;
+    bottom: 0;
+    right: 0%;
+    opacity: 0;
+}
+
+
+/* Espaciado de las flechas que van a los lados de cada anuncio del menu */
+
+.menu_link span {
+    padding: 15px;
+    font-size: 1.1em;
+    display: block;
+}
+
+
+/* Seleccion en el menu */
+
+.menu_link-select:before,
+.menu_link-select:after,
+.menu_link-select span:before,
+.menu_link-select span:after {
+    opacity: 1;
+}
+
+.menu_item:hover .menu_link:before,
+.menu_item:hover .menu_link:after,
+.menu_item:hover .menu_link span:before,
+.menu_item:hover .menu_link span:after {
+    opacity: 1;
+}
+
+
+/* Estilo iconos de redes */
+
+.nav_social {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-social_item {
+    width: 35px;
+    height: 35px;
+    display: block;
+    text-align: center;
+    padding: 8px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-social_item:first-child {
+    background: #3b5998;
+}
+
+.nav-social_item:nth-child(2) {
+    background: #1da1f2;
+}
+
+.nav-social_item:nth-child(3) {
+    background: #c4302b;
+}
+
+.nav-social_item i {
+    color: white;
+}
+
+
+/* Estilo del Banner */
+
+.banner {
+    background: url(../Img/Bar.jpg);
+    min-height: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -999;
+}
+
+
+/* Seudo Elemento del Banner */
+
+.banner:before {
+    content: "";
+    width: 100%;
+    min-height: 100%;
+    background: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.banner_content {
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 1.3em;
+}
+
+
+/* Estilo del texto Bienvenido */
+
+.main {
+    margin-top: 350px;
+}
+
+.section_title {
+    font-size: 2em;
+    position: relative;
+    text-align: center;
+}
+
+
+/* Seudo Elemento del titulo*/
+
+.section_title:before {
+    content: "";
+    width: 200px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #fb6a03;
+}
+
+.Bienvenido {
+    text-align: center;
+    padding: 20px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.Bienvenido_txt {
+    font-size: 1.2em;
+    color: #6b6767;
+}
+
+.Bienvenido_btn {
+    display: block;
+    border: 1px solid #fb6a03;
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    text-decoration: none;
+    color: #fb6a03;
+    font-size: 1.3em;
+    margin-top: 30px;
+    transition: all 0.5s;
+}
+
+.Bienvenido_btn:hover {
+    background: #fb6a03;
+    color: white;
+}
+
+
+/* Estilo imagenes y titulos de las imagenes */
+
+.Container_Diseno {
+    margin: 20px 0;
+}
+
+.Diseno_item {
+    position: relative;
+    padding: ;
+}
+
+.Diseno_item:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.521);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Diseno_title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 1.8em;
+    width: 100%;
+    text-align: center;
+    
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+.Diseno_title:hover {
+    color: #fb6a03;
+}
+
+.Diseno_title:before {
+    content: "";
+    width: 200px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #fb6a03;
+}
+
+.Diseno_title:after {
+    content: "";
+    width: 200px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #fb6a03;
+}
+
+
+/* Estilo de la parte de comentarios e imagen de comentarios */
+
+.container_comentarios {
+    margin: 60px auto;
+    width: 600px;
+}
+
+.comentario_img {
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.comentario_txt {
+    text-align: center;
+    padding: 20px;
+}
+
+.comentario_name {
+    text-align: center;
+    font-size: 1.4em;
+    color: #fb6a03;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Estilo de los iconos de realizar pedidos */
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 30px 0;
+}
+
+.box_content {
+    width: 70%;
+}
+
+.box-icon {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #fb6a03;
+    cursor: pointer;
+    
+}
+
+.box-icon:hover {
+    color:black;
+}
+
+.box_title {
+    color: #fb6a03;
+    margin: 0;
+}
+
+.box_txt {
+    color: #999;
+}
+
+
+/* Estilo del footer */
+
+.main_footer {
+    background: #282828;
+    color: #828282;
+
+}
+
+.main_footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_title {
+    font-size: 1.3em;
+    color: white;
+    text-transform: uppercase;
+}
+
+.column-50-25 {
+    width: 49%;
+    padding: 20px;
+}
+
+.footer_txt .fa-twitter {
+    color: #3bbef5;
+    margin-right: 5px;
+}
+
+.footer_link {
+    color: #fb6a03;
+}
+
+.footer_date {
+    font-size: 0.8em;
+    border-bottom: 1px solid #888;
+    padding-bottom: 10px;
+    color: white;
+}
+
+
+/* Estilo de los iconos del titulo siguenos */
+
+.social_icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social_icon i {
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social_icon .fa-facebook-f {
+    background: #3b5998;
+}
+
+.social_icon .fa-twitter {
+    background: #1da1f2;
+}
+
+.social_icon .fa-whatsapp {
+    background: #00bb2d;
+}
+
+.social_icon .fa-youtube {
+    background: #c4302b;
+}
+
+.social_link {
+    display: block;
+    text-decoration: none;
+    color: #828282;
+}
+
+.contact_icon {
+    display: flex;
+    align-items: center;
+}
+
+.contact_icon .fas {
+    color: white;
+    display: block;
+    margin: 10px;
+}
+
+.copy {
+    background: #211e1e;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        width: auto;
+        display: flex;
+        background: none;
+        font-size: 0.8em;
+    }
+
+    .menu_item {
+        width: auto;
+    }
+
+    .icon-menu {
+        display: none;
+    }
+
+    .banner {
+        min-height: 450px;
+    }
+
+    .banner:before {
+        min-height: 450px;
+    }
+
+    .main {
+        margin-top: 400px;
+    }
+
+    .box {
+        justify-content: center;
+    }
+
+    .box-icon {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .main-title {
+        font-size: 3.5em;
+    }
+
+    .menu {
+        font-size: 1em;
+    }
+
+    .banner {
+        min-height: 600px;
+    }
+
+    .banner:before {
+        min-height: 600px;
+    }
+
+    .banner_title,
+    .banner_txt {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    .main {
+        margin-top: 500px;
+    }
+
+    .Diseno_item {
+        height: 400px;
+    }
+
+    .Container_Diseno .Diseno_img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .Container_Diseno,
+    .container_tips {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Diseno_item {
+        width: 50%;
+    }
+
+    .container-box {
+        width: 50%;
+    }
+
+    .container_tips {
+        height: 500px;
+    }
+
+    .container_tips .Diseno_item {
+        height: 100%;
+    }
+
+    .container_tips .Diseno_img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+
+    .column-50-25 {
+        width: 24%;
+    }
+
+    @media screen and (min-width: 1280px) {
+        .container {
+            width: 1200px;
+        }
+        .Diseno_item {
+        height: 500px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        .container {
+            width: 1400px;
+        }
+    }
+
+    .banner_txt {
+        font-size: 2em;
+    }
+}

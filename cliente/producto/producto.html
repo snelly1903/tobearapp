@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="Css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header_logo" src="img/logo.png" alt="LogoTipo">
+        </a>
+    </header>
+
+    <nav class="navegacion">
+        <!-- Redirecciona a la tienda -->
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+    </nav>
+
+    <main class="contenedor">
+        <h1>Corona</h1>
+
+        <div class="cerveza">
+            <img class="cerveza__imagen" src="img/corona.jpg" alt="imagen del producto">
+
+            <div class="cerveza_contenido">
+                <p>Cerveza Corona</p>
+                <!-- Agregando los campos -->
+                <form class="formulario"></form>
+                <!-- Opciones de eleccion -->
+                <select class="formulario__campo">
+                    <option disabled selected>-Tipo De Cerveza-</option>
+                    <option>Coronita 210 Ml</option>
+                    <option>Corona 355 Ml</option>
+                    <option>Corona 710 ML</option>
+                </select>
+                <!-- Botones -->
+                <input class="formulario__campo" type="number" placeholder="Cantidad" min="1" max="1000">
+                <input class="formulario__comprar" type="submit" value="Comprar">
+            </div>
+        </div>
+    </main>
+    <!-- El parrafo de fin de pag -->
+    <footer class="footer">
+        <p class="footer__texto">ToBeerAPP - Todos lo derechos Reservados 2021</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/*Administrador */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-image: url(../img/thumb-1920-413078.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+main{
+	width: 100%;
+	padding: 150px ;
+	margin: auto;
+	margin-top: 100px;
+}
+
+.contenedor__todo_admin{
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+	position: relative;
+}
+
+/*Formularios*/
+.contenedor__login_admin{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 400px;
+	position: relative;
+	top: 150px;
+	left: 150px;
+
+	transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login_admin form{
+	width: 100%;
+	padding: 70px 40px;
+	background:#fff;
+	position: absolute;
+	border-radius: 20px;
+}
+
+.contenedor__login_admin form h2{
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 20px; 
+	color:#FB6A03;
+}
+
+.contenedor__login_admin form input{
+	width: 100%;
+	margin-top: 20px;
+	padding:  10px;
+	border:none;
+	background:#f2f2f2;
+	font-size: 16px;
+	outline:none;
+}
+
+.contenedor__login_admin form button{
+	padding: 10px 40px;
+	margin-top: 40px;
+	border:none;
+	font-size: 14px;
+	background:#FB6A03;
+	color: white;
+	cursor: pointer;
+	outline: none;
+}
+
+.formulario__login_admin{
+	opacity: 1;
+	display: block;
+}
+
+/*Responsive Disign*/
+
+@media screen and (max-width: 850px){
+	main{
+		margin-top: 50px;
+	}
+	/*Formulario*/
+
+	.contenedor__login_admin{
+		top: -10px;
+		left: -10px;
+		margin: auto;
+	}
+
+	.contenedor__login_admin form{
+		position: relative;
+	}
+}

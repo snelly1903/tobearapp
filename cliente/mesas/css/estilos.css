@@ -1,0 +1,220 @@
+* {
+    /*Aqui decimos que todo lo que se encuentre en la pagina va a tener un relleno y margen de 0px */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Aqui agregamos el color de fondo y la fuente que tendra el cuerpó de la pagina*/
+    background-image: url(../img/chairs.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+    font-family: 'roboto', sans-serif;
+}
+
+
+/* Agregar estilo al contenedor de boton seleccionar*/
+
+.maincontainer {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.btn {
+    /*Estilo para el boton seleccionar*/
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 20px 15px;
+    text-shadow: 0 1px 0 rgb(255, 255, 255, 1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 3);
+    position: relative;
+    top: 20px;
+    left: 450px;
+    right: 300px;
+}
+
+.btn-orange {
+    /*Mas estilo al boton*/
+    color: white;
+    background-color: #fb6a03;
+}
+
+.btn-orange:hover {
+    /*Estilo para cuando se pase el mouse*/
+    background-color: #fb6a03b2;
+}
+
+.btn-orange:active {
+    /*Estilo para cuando se haga click*/
+    background-color: #fff;
+}
+
+a {
+    /* Aqui decimos que todos los enlaces de la pagina definidos en html con etiqueta a no tenga decorado */
+    text-decoration: none;
+}
+
+.contenedor {
+    /*Aca damos estilo al contenedor de select dandole su alto y ancho. Tambien centrando el contenedor*/
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.selectbox {
+    /* Damos eestilo al selectbox donde al dar click se desplegaran las diferentes opciones diciendole el ancho la margen y posicion*/
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.select {
+    /* Trabajamos con la etiqueta select donde daremos el color de fondo su ancho  */
+    background: #fff;
+    width: 100%;
+    /*box shadow nos sirve para dar una sombra */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+    /*border radius para indicar el tamaño del borde */
+    border-radius: 15px;
+    /*cursor pointer para que al pasar el mouse el usuario sepa que tiene mas opciones al seleccionar esa casilla */
+    cursor: pointer;
+    display: flex;
+    /*justify nos sirve para mover el texo a la izquierda y el icono de flecha a la derecha */
+    justify-content: space-between;
+    /*align sirve para centrar los iconos */
+    align-items: center;
+    /*Transition nos sirve para dar tiempo al ponerse la sombra*/
+    transition: .2s ease all;
+    margin-bottom: 30px;
+    padding: 30px;
+    position: relative;
+    /*z index para poner el select encima de otros elementos */
+    z-index: 200;
+    border: 2px solid transparent;
+}
+
+.select.active,
+
+/* Select active para decir que cuando el usuario haga click por ese sector mantenga su color */
+
+.select:hover {
+    /* Para decir que cuando el usuario pase el curso le de el mismo efecto */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    border: 2px solid white;
+}
+
+.select.active:before {
+    /*Para hacer que cuando de click aparezca una flecha en la parte de abajo */
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: 15px solid #4a5251;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    /* Aqui ajustamos los pixeles para que queden en la parte inferior del select*/
+    bottom: -30px;
+    /*Utilizamos la funcion calc para calcular cuanto se debe restar para que quede exactamente en la mitad */
+    left: calc(50% - 15px);
+}
+
+.select i {
+    /* Aqui le damos estilo al icono*/
+    font-size: 40px;
+    margin-left: 40px;
+    color: #fb6a03;
+}
+
+.titulo {
+    /*Damos estilo al titulo*/
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.descripcion {
+    /*damos estilo a la descripcion*/
+    font-size: 15px;
+    color: black;
+}
+
+.opciones {
+    /*Aqui damos estilo a las opciones que apareceran despues de desplegar el select */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    max-height: 400px;
+    /*El overflow no sirve para hacer que los elementos que queden por fuera se puedan ver con un barra para bajar*/
+    overflow: auto;
+    z-index: 100;
+    width: 100%;
+    /*Display none nos sirve para ocultar las opciones*/
+    display: none;
+}
+
+.opciones.active {
+    /*Cuando opciones este activa cambie de none a block para que muestre las opciones*/
+    display: block;
+    animation: fadeIn .3s forwards;
+}
+
+@keyframes fadeIn {
+    /*Parea dar una animacion al desplegar al menu*/
+    from {
+        /*Para que vaya de -200px a 0 en el eje y*/
+        transform: translateY(-200px) scale(.5);
+    }
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.contenido-opcion {
+    /*Aca vamos darle estilo a cada una de las opciones*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s ease all;
+}
+
+.opciones .contenido-opcion {
+    /*Para tener el padding solo cuando este en la contenido de la opcion*/
+    padding: 30px;
+}
+
+.contenido-opcion img {
+    /*Lo utilizaremos para darle el tamaño a la imagen que se encuentra dentro de la opcion*/
+    width: 60px;
+    height: 60px;
+    margin-right: 30px;
+}
+
+.opciones .contenido-opcion:hover {
+    /*Lo utlizamos para poner el color al fondo de la opcion cuando se pasa el puntero*/
+    background: gray;
+}
+
+.opciones .contenido-opcion:hover .titulo,
+
+/*No sirve para dar el color a la letra al pasar el puntero sobre la opcion*/
+
+.opciones .contenido-opcion:hover .descripcion {
+    color: white;
+}
+
+
+/* Para decir el tamañao del select box hasta maximo un ancho de 800 px para que abarque todo el tamaño del select box*/
+
+@media screen and (max-width: 800px) {
+    .selectbox {
+        width: 100%;
+    }
+}

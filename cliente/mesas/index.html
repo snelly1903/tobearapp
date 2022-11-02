@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Aqui abrimos la etiqueta html y definimos el lenguaje en cual trabajaremos el codigo -->
+<html lang="en">
+
+<head>
+    <!-- las etiquetas "meta" utilizadas para definir el tipo de codificacion a usar  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Etiqueta title donde pondremos el nombre de la pagina -->
+    <title>Seleccion de mesa</title>
+    <!-- la etiqueta link utilizada para dar el tipo de fuente de le letra desde una fuente de google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- El siguiente Script lo utilice para agregar un icono en forma de flecha para desplegar desde una pagina llamada fontawesome -->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- La etiqueta link para agregar estilo de un archivo css -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+</head>
+
+<body>
+    <!-- etiqueta div de clase contenedor donde vamos a agregar un form que sera un formulario-->
+    <div class="contenedor">
+        <form action="">
+            <!-- Abrimos la etiqueta div que va a ser un contenedor de seleccion despues de haberlo definido como selectblox-->
+            <div class="selectbox">
+                <!--Creamos un div de tipo select para saber que el cliente podra seleccionar alguna opcion y tambien
+					 creando un id select para poder acceder a el desde el js-->
+                <div class="select" id="select">
+                    <!-- creamos un div de clase contenido select para encajonar un titulo hecho con h1 y descripcion con p-->
+                    <div class="contenido-select">
+                        <!--A la etique h1 y p le damos una clase para asi darle estilo desde otro archivo css -->
+                        <h1 class="titulo">Selecciona tu mesa</h1>
+                        <p class="descripcion">Selecciona la mesa en la cual deseas ubicarte.</p>
+                    </div>
+                    <!--La etiqueta y la utilizaremos para que aparezca una flecha en el contenedor de contenido select-->
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Creamos un div de clase opciones la cual sera una de las casillas que podra seleccionar el cliente y con id opciones para poder acceder a el en js-->
+                <div class="opciones" id="opciones">
+                    <a href="#" class="opcion">
+                        <!--Con la clase contenido opcion sera para darle las propiedades desde js-->
+                        <div class="contenido-opcion">
+                            <!-- Aca pondremos la imagen que tendra la opcion -->
+                            <img src="img/chulo.png" alt="">
+                            <div class="textos">
+                                <h1 class="titulo">Selecciona una mesa</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Utilizaremos la etiqueta a href para decir con js que cada vez un click en alguna de las opciones
+					  tome el texto de la opcion y la ponga donde anteriormente aparecia seleccionar mesa-->
+                    <a href="#" class="opcion">
+                        <!--Con la clase contenido opcion sera para darle las propiedades desde js-->
+                        <div class="contenido-opcion">
+                            <!-- Aca pondremos la imagen que tendra la opcion -->
+                            <img src="img/mesa1.png" alt="">
+                            <div class="textos">
+                                <h1 class="titulo">Mesa 1</h1>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                            <img src="img/mesa2.png" alt="">
+                            <!--Creamos un div de clase textos que encajonara el h1 y en otros casos alguna descripcion si se 
+						quiere colocar-->
+                            <div class="textos">
+                                <h1 class="titulo">Mesa 2</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                            <img src="img/mesa3.png" alt="">
+                            <div class="textos">
+                                <h1 class="titulo">Mesa 3 </h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                            <img src="img/mesa4.png" alt="">
+                            <div class="textos">
+                                <h1 class="titulo">Mesa 4</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                            <img src="img/mesa5.png" alt="">
+                            <div class="textos">
+                                <h1 class="titulo">Mesa 5</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--Nos sirve para almacenar un dato -->
+            <input type="hidden" name="mesa" id="inputSelect" value="">
+        </form>
+
+        <div id="main container">
+            <a href="../producto/index.html" class="btn btn-orange">Seleccionar </a>
+
+        </div>
+
+    </div>
+    <!-- Etiqueta script para llamar el archivo main.js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

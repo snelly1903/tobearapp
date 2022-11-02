@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registrar Producto</title>
+        <link rel="stylesheet" type="text/css" href="css/create.css">
+        <link rel="icon" type="image/png" href="../img/favicon.png">
+    </head>
+    <body>
+        <h1>Registrar Productos</h1>
+        <div class="Contenedor_registro">
+        <form action="insertar.php" method="POST" class="registro_datos">
+            
+            <label for="">Codigo</label>
+            <input type="text" name="Codigo" required placeholder="Codigo">
+
+            <label for="">Nombre</label>
+            <input type="text" name="Nombre" required placeholder="Nombre">
+
+            <label for="">Descripcion</label>
+            <input type="text" name="Descrip" required placeholder="Descripcion">
+            
+            <label for="">Marca</label>
+            <input type="text" name="Marca" required placeholder="Marca">
+            
+            <label for="">Cantidad</label>
+            <input type="number" name="Cantidad" required placeholder="Cantidad" pattern="[0-9]+">
+
+            <label for="">Precio</label>
+            <input type="text" name="Precio" required placeholder="Precio">
+
+            <label for="">Precio x 1</label>
+            <input type="text" name="Preciox1" required placeholder="Precio x 1">
+
+            <label for="">Codigo Admin</label>
+            <input type="text" name="id_admin" required placeholder="Codigo Admin">
+        
+            <a href="../admin/index.php#portfolio" class="volver">Volver Atrás</a>
+            <button>Guardar</button>
+        </form>
+    </body>
+</html>

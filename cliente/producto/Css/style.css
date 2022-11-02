@@ -1,0 +1,226 @@
+/* Varibales de Colores y tipo de fuente */
+:root {
+    --primario: #fb6a03;
+    --primarioOscuro: #000000;
+    --secundario: #f8f400;
+    --secundarioOscuro: rgb(223,287,2);
+    --trasparente: #212121d3;
+    --degradado: #fb6a03d2;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #9c9c9c88;
+
+    --fuentePrincipal: 'Fraunces', serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+/* color de fondo */
+body {
+    background-color: var(--gris);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+/* tamaño de la imagen */
+img {
+    width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+/* Color, Fuente de los textos */
+h1, h2, h3 {
+    text-align: center;
+    color: var(--negro);
+    font-family: var(--fuentePrincipal);
+}
+/* Tamaño */
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 { 
+    font-size: 2.4rem;
+}
+
+
+/** Header **/
+/* Tamaño del logo y la margen */
+.header {
+    display:  flex;
+    width: 380px; height: 170px;
+    display:block;
+    margin:auto;
+}
+
+.header_logo {
+    margin: 2rem 0;
+}
+/** Footer **/
+/* Color de la margen del parrafo y la aliniacion del parrafo */
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: 0.5rem 0;
+    margin-top: 3rem;
+}
+
+.footer__texto {
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/** Navegacion **/
+/* El estilo de la barra de la tienda, enlaces y colores */
+.navegacion {
+    background-color: var(--trasparente);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 2.5rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: var(--primario);
+}
+
+/* Grid */
+/* la reparticion de columnas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Productos */
+.producto {
+    background-color: var(--negro);
+    padding: 1rem;
+}
+.producto__nombre {
+    font-size: 3.5rem;
+    color: var(--blanco);
+}
+.producto__precio {
+    font-size: 2.5rem;
+    color: var(--primario);
+}
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* Grafico */
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grafico--cerveza {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3 ;
+    background-image: url(../img/cerveza.jpg);
+}
+.grafico--drink {
+    background-image: url(../img/drink.jpg);
+    grid-column: 1 / 3;
+    grid-row: 8 / 9;
+}
+
+@media (min-width: 768px) {
+    .grafico--drink {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+    }
+}
+
+/* Carrito */
+.carrito {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 768px) {
+    .carrito {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.3rem;
+    }
+}
+.nosotros__imagen {
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+}
+
+/* Pag Producto */
+@media (min-width: 768px) {
+    .cerveza {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 2rem;
+    }
+}
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+}
+/* Agregando estilo a los botones y campos */
+.formulario__campo {
+    border: 1rem solid var(--primarioOscuro);
+    background-color: transparent;
+    color: var(--negro);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+.formulario__comprar {
+    background-color: var(--primario);
+    border: none;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / auto;
+}
+.formulario__comprar:hover {
+    cursor: pointer;
+    background-color: var(--degradado);
+}
